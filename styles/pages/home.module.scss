@@ -1,0 +1,14 @@
+@import '../globals/media-queries.scss';
+
+.main {
+	width: 100%;
+
+	@include bp(desktop) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	&__title {
+		text-align: center;
+	}
+}

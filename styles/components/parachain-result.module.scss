@@ -1,0 +1,51 @@
+@import '../../styles/globals/media-queries.scss';
+@import '../../styles/globals/measures.scss';
+@import '../../styles/globals/colors.scss';
+
+.parachain-result {
+	height: $height-parachain-result;
+	border-top: 1px solid $light-grey;
+	border-left: 1px solid $light-grey;
+	border-right: 1px solid $light-grey;
+
+	&__container {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		padding: 0 10px;
+	}
+
+	&__text {
+		flex: 1 1 25%;
+
+		@include bp(desktop) {
+			flex: 0 0 300px;
+		}
+	}
+
+	&:hover {
+		background-color: $light-grey;
+	}
+
+	&-name {
+		display: none;
+	}
+
+	&-name, &-price, &-cap, &-circulating {
+		color: $dark-grey;
+		font-weight: bold;
+		flex: 1 1 25%;
+
+		@include bp(tablet) {
+			display: block;
+		}
+
+		@include bp(desktop) {
+			flex: 0 0 300px;
+		}
+	}
+
+	&-symbol {
+		color: $medium-grey;
+	}
+}

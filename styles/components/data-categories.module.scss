@@ -1,0 +1,46 @@
+@import '../../styles/globals/media-queries.scss';
+@import '../../styles/globals/measures.scss';
+@import '../../styles/globals/colors.scss';
+
+.data-categories {
+	display: flex;
+	border-top: 1px solid $light-grey;
+	border-left: 1px solid $light-grey;
+	border-right: 1px solid $light-grey;
+	height: $height-parachain-result;
+	align-items: center;
+	padding-left: 10px;
+
+	&-label {
+		cursor: pointer;
+	}
+
+	&-label, &-name {
+		flex: 0 0 25%;
+
+		@include bp(desktop) {
+			flex: 0 0 300px;
+		}
+	}
+}
+
+
+.asc {
+	&::after {
+		content: '^';
+		display: inline-block;
+		font-size: 1.2em;
+		margin-left: 5px;
+		transform: translateY(5px);
+	}
+}
+
+.desc {
+	&::after {
+		content: '^';
+		display: inline-block;
+		font-size: 1.2em;
+		margin-left: 5px;
+		transform: rotate(180deg);
+	}
+}
