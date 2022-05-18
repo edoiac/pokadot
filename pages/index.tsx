@@ -53,9 +53,9 @@ const Home: NextPage = () => {
   const sortCryptos = (cat: string, order: orderType) => {
     let cryptosSorted
     if (order === '' || order === 'asc') {
-      cryptosSorted = [...cryptos].sort((item1, item2) => currency(item2[cat]).subtract(item1[cat]))
+      cryptosSorted = [...cryptos].sort((item1, item2) => currency(item2[cat]).subtract(item1[cat]).value)
     } else {
-      cryptosSorted = [...cryptos].sort((item1, item2) => currency(item1[cat]).subtract(item2[cat]))
+      cryptosSorted = [...cryptos].sort((item1, item2) => currency(item1[cat]).subtract(item2[cat]).value)
     }
     setCryptos(cryptosSorted)
   }

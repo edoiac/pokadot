@@ -2,8 +2,8 @@ import React from 'react';
 import styles from '../../styles/components/parachain-result.module.scss'
 
 export interface ParachainResultInterface {
-	id: number
-	name: string
+	[name: string]: string
+	id: string
 	symbol: string
 	price: string
 	marketCap: string
